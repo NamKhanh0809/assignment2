@@ -1,18 +1,22 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package homework1;
 
+import java.util.Scanner;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 /**
  *
  * @author Inspiron
  */
 import java.util.Scanner;
 
-public class Homework1 {
+public class homeworkSao {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         Scanner Ttsv = new Scanner(System.in);
         System.out.println("nhap ten: ");
         String ten = Ttsv.nextLine();
@@ -33,14 +37,22 @@ public class Homework1 {
         System.out.println("nhap GPA: ");
         String gpa = Ttsv.nextLine();
 
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+
+        System.out.print("nhap ngay thang năm sinh (dd/MM/yyyy): ");
+        String dateInput = Ttsv.nextLine();
+
+        Date date = formatter.parse(dateInput);
+
         System.out.println("ten: " + ten);
         System.out.println("tuoi: " + tuoi);
         System.out.println("gioi tinh: " + gioitinh);
+        System.out.println("Ngay sinh: " + formatter.format(date));
+        System.out.println("que quan: " + quequan);
         System.out.println("chuyen nganh: " + chuyennganh);
         System.out.println("GPA: " + gpa);
-        System.out.println("que quan: " + quequan);
+       
 
         Ttsv.close();
     }
-
 }

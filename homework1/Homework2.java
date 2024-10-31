@@ -11,18 +11,19 @@ package homework1;
 import java.util.Scanner;
 
 public class Homework2 {
-   public static void main(String[]args){
-    
-      Scanner kitu = new Scanner(System.in);
-       String ten;
-  System.out.println("nhap vao ki tu: ");
-  ten = kitu.nextLine();
-  System.out.println(ten);
-  if(kitu.hasNext(ten)==true) System.out.println("day la chuoi");
-          else System.out.println("day khong phai 1 chuoi");
-      
-       kitu.close();
-     
-      
-   }
+
+    public static void main(String[] args) {
+        Scanner kitu = new Scanner(System.in);
+
+        System.out.println("nhap vao ki tu: ");
+
+        if (kitu.hasNext()) {
+            String chuoi = kitu.nextLine();
+            System.out.println("day la chuoi.");
+        } else {
+            System.out.println("day khong phai la chuoi.");
+        }
+
+        kitu.close();
+    }
 }
